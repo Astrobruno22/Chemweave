@@ -11,7 +11,7 @@ class DiskModel:
         self.temp = np.loadtxt(os.path.join(model,"gastemp.txt"))
         self.av = np.loadtxt(os.path.join(model,"av.txt"))
         self.g0 = np.loadtxt(os.path.join(model,"G0.txt"))
-        self.ncells = len(self.density)self.gr = np.loadtxt(dustdensity)[:, 0]
+        self.ncells = len(self.density)
 
         #abundance matrix
         self.x = np.zeros((net.n_species,self.ncells))

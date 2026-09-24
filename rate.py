@@ -67,9 +67,8 @@ class RateEvaluator: #check if it multiples by xion value
                 k[j] = (a or 0.0) * sigma_nd
             elif lab == "PA":
                 k[j] = 0.0
-            for j in self.dead_j:
-                k[j] = 0.0
-        return k
+        for j in self.dead_j:
+            k[j] = 0.0
         return k
     def fluxes(self, k, n):
         net = self.net
@@ -80,4 +79,3 @@ class RateEvaluator: #check if it multiples by xion value
                 v*= n[i-1]
             R[j] = v
         return R
-                    
